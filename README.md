@@ -1,6 +1,3 @@
-## App Status:
-[![CircleCI](https://circleci.com/gh/JohnVonNewman/Udacity_DevOps_Capstone.svg?style=svg)](https://circleci.com/gh/JohnVonNewman/Udacity_DevOps_Capstone)
-
 ## NBL - Hello World!
 http://abfe384c40ea94bf7982978bb0053f68-2032213583.us-east-2.elb.amazonaws.com:5000/
 
