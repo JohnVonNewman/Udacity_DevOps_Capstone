@@ -72,7 +72,7 @@ jobs:
       - checkout
       - aws_cli_credentials
       - aws-eks/create-cluster:
-          cluster-name: udacity-devops-capstone
+          cluster-name: udacity-devops-capstone-ducpv12
           aws-region: us-east-1
           node-type: t2.micro
           nodes-min: 2
@@ -85,7 +85,7 @@ jobs:
       - checkout
       - aws_cli_credentials
       - aws-eks/update-kubeconfig-with-authenticator:
-          cluster-name: udacity-devops-capstone
+          cluster-name: udacity-devops-capstone-ducpv12
           install-kubectl: true
       - kubernetes/create-or-update-resource:
           resource-file-path: infras/deployment.yaml
