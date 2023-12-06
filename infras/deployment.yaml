@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: udacity-devops-capstone
+  name: udacity_devops_capstone
   labels:
-    app: devops-capstone
+    app: devops_capstone
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: devops-capstone
+      app: devops_capstone
   template:
     metadata:
       labels:
-        app: devops-capstone
+        app: devops_capstone
     spec:
       containers:
-      - name: devops-capstone-udacity
-        image: 504395544721.dkr.ecr.us-east-1.amazonaws.com/devops-capstone-udacity:v1
+      - name: devops_capstone_udacity
+        image: https://hub.docker.com/repository/docker/ducpvudacity/udacity_devops_capstone
         ports:
           - name: web
             containerPort: 5000
@@ -24,10 +24,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: devops-capstone-service
+  name: devops_capstone_service
 spec:
   selector:
-    app: devops-capstone
+    app: devops_capstone
   type: LoadBalancer
   ports:
     - protocol: TCP
