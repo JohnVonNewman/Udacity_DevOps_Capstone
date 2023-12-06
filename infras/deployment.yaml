@@ -1,31 +1,30 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: udacity-prj5-deployment  # Updated deployment name
+  name: udacity-prj5-deployment
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: udacity-prj5  # Updated app label
+      app: udacity-prj5
   template:
     metadata:
       labels:
-        app: udacity-prj5  # Updated app label
+        app: udacity-prj5
     spec:
       containers:
-      - name: udacity_devops_capstone
+      - name: udacity-devops-capstone  # Adjusted container name to follow naming conventions
         image: ducpvudacity/udacity_devops_capstone:v1
         ports:
         - containerPort: 80
-
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: udacity-prj5-service  # Updated service name
+  name: udacity-prj5-service
 spec:
   selector:
-    app: udacity-prj5  # Updated app label
+    app: udacity-prj5
   ports:
     - protocol: TCP
       port: 80
