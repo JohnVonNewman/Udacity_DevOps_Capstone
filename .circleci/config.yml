@@ -76,7 +76,7 @@ jobs:
       - aws_cli_credentials  # Use AWS CLI credentials
       - aws-eks/create-cluster:  # Create an AWS EKS cluster
           cluster-name: clst-udacity-devops-prj5
-          aws-region: us-east-1
+          aws-region: us-east-2
           node-type: t2.micro
           nodes-min: 2
           nodes-max: 3
