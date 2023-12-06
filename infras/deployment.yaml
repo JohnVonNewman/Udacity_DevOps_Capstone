@@ -1,32 +1,39 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: udacity-prj5-deployment
+  name: project-5-udacity-learn
+  labels:
+    app: project-5
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
-      app: udacity-prj5
+      app: project-5
   template:
     metadata:
       labels:
-        app: udacity-prj5
+        app: project-5
     spec:
       containers:
-      - name: udacity-devops-capstone  # Adjusted container name to follow naming conventions
+      - name: project-5-udacity
         image: ducpvudacity/udacity_devops_capstone:v1
+        # imagePullPolicy: Always
         ports:
-        - containerPort: 80
+          - name: web
+            containerPort: 5000
+      # imagePullSecrets:
+      #     - name: regcred
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: udacity-prj5-service
+  name: project-5-service
 spec:
   selector:
-    app: udacity-prj5
+    app: project-5
+  type: LoadBalancer
   ports:
     - protocol: TCP
-      port: 80
-      targetPort: 80
-  type: LoadBalancer
+      port: 5000
+      targetPort: 5000
+      nodePort: 30000
