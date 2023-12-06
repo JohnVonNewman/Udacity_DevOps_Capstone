@@ -1,35 +1,39 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: udacity_devops_capstone
+  name: project-5-udacity-learn
   labels:
-    app: devops_capstone
+    app: project-5
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: devops_capstone
+      app: project-5
   template:
     metadata:
       labels:
-        app: devops_capstone
+        app: project-5
     spec:
       containers:
-      - name: devops_capstone_udacity
+      - name: project-5-udacity
         image: https://hub.docker.com/repository/docker/ducpvudacity/udacity_devops_capstone
+        # imagePullPolicy: Always
         ports:
           - name: web
             containerPort: 5000
+      # imagePullSecrets:
+      #     - name: regcred
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: devops_capstone_service
+  name: project-5-service
 spec:
   selector:
-    app: devops_capstone
+    app: project-5
   type: LoadBalancer
   ports:
     - protocol: TCP
       port: 5000
       targetPort: 5000
+      nodePort: 30000
