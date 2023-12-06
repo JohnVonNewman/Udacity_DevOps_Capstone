@@ -13,7 +13,7 @@ spec:
         app: udacity-prj5  # Updated app label
     spec:
       containers:
-      - name: my-app-container
+      - name: udacity_devops_capstone
         image: ducpvudacity/udacity_devops_capstone:v1
         ports:
         - containerPort: 80
