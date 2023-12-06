@@ -73,7 +73,7 @@ jobs:
       - aws_cli_credentials
       - aws-eks/create-cluster:
           cluster-name: udacity-devops-capstone-ducpv12fpt
-          aws-region: us-east-1
+          aws-region: us-east-2
           node-type: t2.micro
           nodes-min: 2
           nodes-max: 3
