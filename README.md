@@ -1,5 +1,5 @@
 ## App Status:
-
+[![CircleCI](https://circleci.com/gh/JohnVonNewman/Udacity_DevOps_Capstone.svg?style=svg)](https://circleci.com/gh/JohnVonNewman/Udacity_DevOps_Capstone)
 # Repository
 https://github.com/JohnVonNewman/Udacity_DevOps_Capstone.git
 
